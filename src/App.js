@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-
 import MovieCard from "./MovieCard";
 import SearchIcon from "./search.svg";
 import "./App.css";
 
-const API_URL = "http://www.omdbapi.com?apikey=b6003d8a";
+const API_URL = "http://www.omdbapi.com/?apikey=b6003d8a";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -20,9 +19,9 @@ const App = () => {
 
     setMovies(data.Search);
   };
-
+// console.log(movies);
   return (
-    <div className="app">
+    <div className="app" >
       <h1>MovieLand</h1>
 
       <div className="search">
